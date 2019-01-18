@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qCF-1Y-Sqj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3k-3X-q2g">
+                                <rect key="frame" x="16" y="229.5" width="343" height="223.5"/>
+                                <string key="text">This view controller is the rootViewController of a navigationController.
+In this navigation controller, the topViewController is defined as the "childForStatusBarStyle".
+
+Its preferredStatusBarStyle is .default, to match the light navigationBar.
+
+Tap on the "Push" button to push a new view controller.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B3k-3X-q2g" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cGA-SA-t30"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B3k-3X-q2g" secondAttribute="trailing" constant="16" id="qUb-Ya-gnx"/>
+                            <constraint firstItem="B3k-3X-q2g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vAT-iV-SLq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Initial" id="JEH-Jj-jfZ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nNM-xb-NsZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Push" id="mgA-B9-K0C">
+                            <connections>
+                                <segue destination="BDv-ud-XuW" kind="show" id="2Gp-Jx-Qfb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="185.75712143928038"/>
+        </scene>
+        <!--Pushed-->
+        <scene sceneID="3Ti-Mw-VVQ">
+            <objects>
+                <viewController id="BDv-ud-XuW" customClass="PushedViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ik-O4-k1J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeb-BF-HC7">
+                                <rect key="frame" x="16" y="260" width="343" height="162.5"/>
+                                <string key="text">This view controller has been pushed on the stack of the navigationController.
+
+Its preferredStatusBarStyle is .lightContent, to match the dark navigationBar.
+
+Tap on the "Back" button to pop this view controller.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xeb-BF-HC7" firstAttribute="leading" secondItem="ns7-JZ-cQ9" secondAttribute="leading" constant="16" id="0mI-kW-H4g"/>
+                            <constraint firstItem="xeb-BF-HC7" firstAttribute="centerY" secondItem="ns7-JZ-cQ9" secondAttribute="centerY" id="AQv-lh-sZW"/>
+                            <constraint firstItem="ns7-JZ-cQ9" firstAttribute="trailing" secondItem="xeb-BF-HC7" secondAttribute="trailing" constant="16" id="t0A-3O-sKb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ns7-JZ-cQ9"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pushed" id="lMM-Zx-82l"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLk-2c-dxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="185.75712143928038"/>
+        </scene>
+        <!--Embed-->
+        <scene sceneID="jD1-yy-1uY">
+            <objects>
+                <viewController storyboardIdentifier="LonelyViewController" id="kIw-gx-Bqj" customClass="LonelyViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0n-kz-Mbd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uac-V6-RuU">
+                                <rect key="frame" x="105" y="304" width="165" height="30"/>
+                                <state key="normal" title="Embed a view controller">
+                                    <color key="titleColor" red="0.0" green="1" blue="0.65739924630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="embed:" destination="kIw-gx-Bqj" eventType="touchUpInside" id="Vc5-EQ-iwR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dG-Z6-i6a">
+                                <rect key="frame" x="16" y="121.5" width="343" height="162.5"/>
+                                <string key="text">This view controller has no navigation controller.
+
+Its preferredStatusBarStyle is set to .lightContent, to match its dark background.
+Its childForStatusBarStyle is set as the embedded view controller.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uac-V6-RuU" firstAttribute="top" secondItem="8dG-Z6-i6a" secondAttribute="bottom" constant="20" id="Akw-aN-KA8"/>
+                            <constraint firstItem="uac-V6-RuU" firstAttribute="leading" secondItem="8zX-q9-SAm" secondAttribute="leading" constant="105" id="Bq1-qT-2Cy"/>
+                            <constraint firstItem="uac-V6-RuU" firstAttribute="centerY" secondItem="8zX-q9-SAm" secondAttribute="centerY" id="H9o-GC-BlU"/>
+                            <constraint firstItem="8dG-Z6-i6a" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8zX-q9-SAm" secondAttribute="top" id="NYx-NC-VAl"/>
+                            <constraint firstItem="8dG-Z6-i6a" firstAttribute="leading" secondItem="8zX-q9-SAm" secondAttribute="leading" constant="16" id="W4U-m0-fyo"/>
+                            <constraint firstItem="uac-V6-RuU" firstAttribute="centerX" secondItem="8zX-q9-SAm" secondAttribute="centerX" id="nmL-Ef-2Bu"/>
+                            <constraint firstItem="8zX-q9-SAm" firstAttribute="trailing" secondItem="uac-V6-RuU" secondAttribute="trailing" constant="105" id="obY-pQ-6eW"/>
+                            <constraint firstItem="8zX-q9-SAm" firstAttribute="trailing" secondItem="8dG-Z6-i6a" secondAttribute="trailing" constant="16" id="t1R-qd-3BH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8zX-q9-SAm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Embed" id="Kkg-i1-uhs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGX-gy-SnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296.8" y="-575.26236881559225"/>
+        </scene>
+        <!--Embedded View Controller-->
+        <scene sceneID="A43-k2-kB5">
+            <objects>
+                <viewController storyboardIdentifier="EmbeddedViewController" id="OPm-CO-CME" customClass="EmbeddedViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Zt-EC-lNF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ji6-VH-1hc">
+                                <rect key="frame" x="55.5" y="328.5" width="264" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Remove embedded">
+                                    <color key="titleColor" red="0.11948578134874485" green="0.38815683731572881" blue="0.14262426776362513" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeEmbedded:" destination="OPm-CO-CME" eventType="touchUpInside" id="Cr1-4a-Yeo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-Hc-Jyh">
+                                <rect key="frame" x="16" y="146" width="343" height="162.5"/>
+                                <string key="text">This view controller is embedded as a child of the previous view controller.
+
+Its preferredStatusBarStyle is .default, to match its light background.
+This works only because the "root" view controller has defined the embedded view controller as its "childForStatusBarStyle".</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93340216805713261" green="1" blue="0.95918545752255013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Xet-Hc-Jyh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LXO-cc-FPM" secondAttribute="top" id="1Vl-Cq-NRo"/>
+                            <constraint firstItem="ji6-VH-1hc" firstAttribute="top" secondItem="Xet-Hc-Jyh" secondAttribute="bottom" constant="20" id="OAl-NY-uIE"/>
+                            <constraint firstItem="LXO-cc-FPM" firstAttribute="trailing" secondItem="Xet-Hc-Jyh" secondAttribute="trailing" constant="16" id="RCW-HR-HvF"/>
+                            <constraint firstItem="LXO-cc-FPM" firstAttribute="trailing" secondItem="ji6-VH-1hc" secondAttribute="trailing" constant="55.5" id="WPI-Xk-TMR"/>
+                            <constraint firstItem="Xet-Hc-Jyh" firstAttribute="leading" secondItem="LXO-cc-FPM" secondAttribute="leading" constant="16" id="Wgl-cf-p1n"/>
+                            <constraint firstItem="ji6-VH-1hc" firstAttribute="leading" secondItem="LXO-cc-FPM" secondAttribute="leading" constant="55.5" id="hFJ-GN-KQq"/>
+                            <constraint firstItem="ji6-VH-1hc" firstAttribute="centerY" secondItem="LXO-cc-FPM" secondAttribute="centerY" id="sfC-D5-luF"/>
+                            <constraint firstItem="ji6-VH-1hc" firstAttribute="centerX" secondItem="LXO-cc-FPM" secondAttribute="centerX" id="z77-5b-kWF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LXO-cc-FPM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBn-jS-0kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2124" y="-575.26236881559225"/>
+        </scene>
+        <!--Push-->
+        <scene sceneID="2Q5-2T-MIm">
+            <objects>
+                <navigationController storyboardIdentifier="NavControllerForPush" automaticallyAdjustsScrollViewInsets="NO" id="3Vx-WH-EyD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Push" id="r6P-Ej-ird"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MeA-Yf-KNc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DOM-BL-esq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDC-gG-sE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1296.8" y="185.75712143928038"/>
+        </scene>
+        <!--Initial-->
+        <scene sceneID="TeH-8K-Qgt">
+            <objects>
+                <viewController id="DW1-Je-WtH" customClass="InitialViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z5a-He-fth">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtE-th-HiC">
+                                <rect key="frame" x="16" y="219.5" width="343" height="243.5"/>
+                                <string key="text">This view controller is the rootViewController of a navigationController.
+
+In this navigation controller, the topViewController is defined as the "childForStatusBarStyle".
+
+Its preferredStatusBarStyle is .default, to match the light navigationBar.
+
+Tap on the "Present" button to present modally a new view controller.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RFK-os-wc4" firstAttribute="trailing" secondItem="TtE-th-HiC" secondAttribute="trailing" constant="16" id="NlU-FP-2ye"/>
+                            <constraint firstItem="TtE-th-HiC" firstAttribute="centerY" secondItem="RFK-os-wc4" secondAttribute="centerY" id="amA-hf-VKB"/>
+                            <constraint firstItem="TtE-th-HiC" firstAttribute="leading" secondItem="RFK-os-wc4" secondAttribute="leading" constant="16" id="fZq-Sb-dMD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RFK-os-wc4"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Initial" id="reo-T0-Wuq">
+                        <barButtonItem key="rightBarButtonItem" title="Present" id="AT2-hF-YL6">
+                            <connections>
+                                <segue destination="86M-Yt-rrs" kind="presentation" id="uek-Al-QDV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textLabel" destination="TtE-th-HiC" id="vDx-QZ-eWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMA-g2-TGj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="1000"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c2h-Mc-yTS">
+            <objects>
+                <navigationController id="86M-Yt-rrs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Pl-km-N1Z">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RN9-Pq-gHV" kind="relationship" relationship="rootViewController" id="lyE-8J-Ht1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3s-HR-iKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="999"/>
+        </scene>
+        <!--Presented-->
+        <scene sceneID="E41-PL-LZD">
+            <objects>
+                <viewController id="RN9-Pq-gHV" customClass="PresentedModallyViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="re3-Vv-Cny">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q2-GV-2i7">
+                                <rect key="frame" x="16" y="264" width="343" height="203"/>
+                                <string key="text">This view controller is the rootViewController of a new navigationController which has been presented by the initial navigationController.
+
+Its preferredStatusBarStyle is .lightContent, to match the dark navigationBar.
+
+Tap on the "Cancel" button to dismiss this view controller.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6q2-GV-2i7" firstAttribute="centerY" secondItem="gpG-gQ-wzw" secondAttribute="centerY" id="99e-F3-Dg9"/>
+                            <constraint firstItem="6q2-GV-2i7" firstAttribute="leading" secondItem="re3-Vv-Cny" secondAttribute="leadingMargin" id="j6J-Sc-8QU"/>
+                            <constraint firstItem="6q2-GV-2i7" firstAttribute="trailing" secondItem="re3-Vv-Cny" secondAttribute="trailingMargin" id="kCk-IV-sy9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gpG-gQ-wzw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Presented" id="lA2-Ay-rQy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bG1-vB-Bo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3559" y="999"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="G5F-qP-ahh">
+            <objects>
+                <tabBarController id="qCF-1Y-Sqj" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DyC-LC-c6g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kIw-gx-Bqj" kind="relationship" relationship="viewControllers" id="yaA-b6-AVO"/>
+                        <segue destination="3Vx-WH-EyD" kind="relationship" relationship="viewControllers" id="nRD-vW-gNH"/>
+                        <segue destination="eqe-Fs-B9f" kind="relationship" relationship="viewControllers" id="0uc-il-4PO"/>
+                        <segue destination="BJG-VN-Exq" kind="relationship" relationship="viewControllers" id="94D-xw-yMf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkN-25-HM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1141" y="425"/>
+        </scene>
+        <!--Modal-->
+        <scene sceneID="ZST-on-YfR">
+            <objects>
+                <navigationController storyboardIdentifier="NavControllerForModal" automaticallyAdjustsScrollViewInsets="NO" id="eqe-Fs-B9f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Modal" id="R9j-dM-yuQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uar-Cl-NRN">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DW1-Je-WtH" kind="relationship" relationship="rootViewController" id="fcl-NW-cWJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhk-FA-Rsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="1000"/>
+        </scene>
+        <!--Root-->
+        <scene sceneID="huQ-Hl-ust">
+            <objects>
+                <viewController storyboardIdentifier="BaseViewController" id="BJG-VN-Exq" customClass="BaseViewController" customModule="testStatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHD-vH-nJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="X4U-PQ-Hcg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Root" id="bmW-Bc-6xm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eo7-D0-haP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1297" y="1907"/>
+        </scene>
+    </scenes>
+</document>
