@@ -131,7 +131,7 @@ Its childForStatusBarStyle is set as the embedded view controller.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGX-gy-SnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1296.8" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="1297" y="-591"/>
         </scene>
         <!--Embedded View Controller-->
         <scene sceneID="A43-k2-kB5">
@@ -178,7 +178,7 @@ This works only because the "root" view controller has defined the embedded view
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBn-jS-0kv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="-575.26236881559225"/>
+            <point key="canvasLocation" x="2012" y="-591"/>
         </scene>
         <!--Push-->
         <scene sceneID="2Q5-2T-MIm">
@@ -312,7 +312,7 @@ Tap on the "Cancel" button to dismiss this view controller.</string>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkN-25-HM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1141" y="425"/>
+            <point key="canvasLocation" x="-482" y="545"/>
         </scene>
         <!--Modal-->
         <scene sceneID="ZST-on-YfR">
@@ -347,7 +347,7 @@ Tap on the "Cancel" button to dismiss this view controller.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eo7-D0-haP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="1907"/>
+            <point key="canvasLocation" x="1297" y="1849"/>
         </scene>
     </scenes>
 </document>

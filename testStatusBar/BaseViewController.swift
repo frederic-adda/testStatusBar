@@ -10,10 +10,6 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    var shoudCreateInitialInStoryboard = false
-
-    private var navController: UINavigationController!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
